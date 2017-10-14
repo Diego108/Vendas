@@ -3,10 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	  xmlns:h="http://xmlns.jcp.org/jsf/html"
 	  xmlns:f="http://xmlns.jcp.org/jsf/core">
-	<head>
+	<h:head>
 		<title>Olá mundo</title>
-	</head>
-	<body>
+	</h:head>
+	<h:body>
+	<h:form>
 		<h:outputText value="Olá mundo !" />
-	</body>
+		<h:commandButton action="#{cadastroMB.novo()}" value="Ir para cadastro"/>
+	</h:form>
+	</h:body>
 </html>
