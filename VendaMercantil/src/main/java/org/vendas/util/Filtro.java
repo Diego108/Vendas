@@ -1,4 +1,4 @@
-package org.vendas.util.filter;
+package org.vendas.util;
 
 import java.io.IOException;
 
@@ -13,7 +13,6 @@ import javax.servlet.annotation.WebFilter;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.vendas.daoFactory.HibernateUtil;
 
 @WebFilter(urlPatterns = {"*.jsf"})
 public class Filtro implements Filter{
@@ -35,11 +34,10 @@ public class Filtro implements Filter{
 		Transaction transacao = null;
 		
 		try{
-			
 			transacao = sessao.beginTransaction();
 			chain.doFilter(request, response);
 			transacao.commit();
-			
+
 			if(sessao.isOpen()){
 				sessao.close();
 			}

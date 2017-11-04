@@ -6,12 +6,13 @@
           
  <hibernate-configuration>
  	<session-factory>
+ 		
  		<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
- 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
- 		<property name="connection.url">jdbc:mysql://localhost/ipecons</property>
- 		<property name="connection.user">root</property>
- 		<property name="connection.password">root</property>
+ 		<property name="connection.datasource">java:/comp/env/jdbc/VendasDB</property>
  		<property name="current_session_context_class">thread</property>
  		<property name="hibernate.hbm2ddl.auto">update</property>
+ 		
+ 		<mapping class="org.vendas.model.entity.cadastro.BCHATMKT001_USER_DS"/>
+ 		<mapping class="org.vendas.model.entity.cadastro.BCHATMKT001_USER_PERMISSION_DS"/>
  	</session-factory>
  </hibernate-configuration>

@@ -1,4 +1,4 @@
-package org.vendas.daoFactory;
+package org.vendas.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistry;

@@ -33,5 +33,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="src/main/webapp/lib/facelets-taglib-jsf20-spring-3-0.5.jar.zip"/>
+	<classpathentry kind="lib" path="src/main/webapp/lib/mysql-connector-java-5.1.17.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
